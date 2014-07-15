@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>リストマークと箇条書きの位置調整</title>
+<style type="text/css">
+
+
+body {
+	background-color: #fff;
+	}
+
+ul {
+	border: solid 1px #000;
+	list-style-type: disc;
+}
+	
+ul li {
+		background-color: #ff0000;
+		
+		
+}
+	
+/* ulのpaddingを0にする  */
+ul.pad-zero {
+	padding: 0px;
+	}
+
+/* ulのpaddingを20pxにする整  */
+ul.pad-twenty {
+	padding: 20px;
+	}	
+	
+/* ulのpadding-leftを20pxにする  */
+ul.pad-left {
+	padding-left: 20px;
+	}		
+
+
+</style>
+
+</head>
+<body>
+<h1>リストマークと箇条書きの位置調整</h1>
+
+<h1>枠線はul  赤色はliの枠</h1>
+<p>list-style-typeは、ulであろうが、liだろうが、どちらでもコーディング可能</p>
+<p>なにも指定していない状態。リストマークにもともとpaddingが入っている</p>
+<ul class="none">     <!-- 文字だけ -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+
+<p>ulのpaddingを0にする</p>
+<ul class="pad-zero">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+<p>ulのpaddingを20pxにする</p>
+<ul class="pad-twenty">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>ulのpadding-leftを20pxにする</p>
+<ul class="pad-left">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+</body>
+</html>

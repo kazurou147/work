@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>formの学習</title>
+<style type="text/css">
+
+<!-- 横に並べる -->
+
+
+body {
+	background-color: #fff;
+	}
+
+#f p {
+	margin: 0 0 10px 0;
+}
+
+
+</style>
+
+</head>
+<body>
+<h1>フォーム学習</h1>
+
+<form id="f" action="translationcn@futatsumaru.sakura.ne.jp" method="post" enctype="multipart/form-data">
+<h2>お見積り・お問合せフォーム</h2>
+
+<p>お名前（必須）</p>
+<p><input type="text" name="name" size="40"></p>
+
+<p>メールアドレス（必須）</p>
+<p><input type="text" name="mail-address" size="40"></p>
+
+<p><input type="radio" name="riyuu" value="omitumori">お見積り
+<input type="radio" name="riyuu" value="otoiawase">お問合せ</p>
+
+<p>件名（必須）</p>
+<p><input type="text" name="title" size="60"></p>
+
+<p>添付ファイル（容量2MBまで）</p>
+<p><input type="file" name="exsample">添付ファイル</p>
+
+<p>メッセージ本文　（枠内　右下をドラッグすると枠が大きくなります）</p>
+<p><textarea name="message" rows="5" cols="65"></textarea></p>
+
+<p><input type="checkbox">内容を ご確認の上、チェックを入れてください</p>
+
+<p><input type="submit" value="送信する"></p>
+
+</form>
+
+<h2>説明</h2>
+<p>フォームに入力されたデータは、送信ボタンを押すことで<b>CGIプログラム等</b>へ送信され、一定の処理が行われます。<br>
+その際の送信先はaction属性で、転送方法はmethod属性で、データ形式はenctype属性でそれぞれ指定します。</p>
+
+
+<p>textareaは、 FORMタグのaction属性で指定したサーバー上のファイルに、 FORMタグのmethod属性で指定した転送方法で送られます。<br>
+rows属性とcols属性が必須の属性です。 </p>
+
+<p>input type="radio"のnameを同一にするのがポイント。<br>
+nameを同じにしないと、一方を選択することができない。選択できずに全部選択ができてしまう。
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body>
+</html>

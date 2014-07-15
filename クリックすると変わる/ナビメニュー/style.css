@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* 全体のフォント */
+
+body  {	   
+        width: 100%;
+        background-color: #F0F0F0;
+        color: #000;                /*   */
+        line-height: 1.7;           /*   */
+}
+
+#wrapper  {
+	       width: 1024px;           /* コンテンツの幅  */
+		   margin: 0px auto;       /* 中央配置 */
+		   padding: 0px;      
+		   text-align: left;       /* 文字左揃え  */
+}
+
+
+
+
+.navigation	{					/*  ナビゲーションメニュー   */
+	           width: 100%;             /*   */
+			   clear: both;             /*   */
+			   padding: 5px 15px;  /*   */
+			   min-height: 1px;         /*   */
+}
+
+.navigation ul   {
+/*	float:left;             /*   */
+	margin: 0px 0px 0px 0px;   /*   */
+}
+
+.navigation  li {
+	display: inline-block;
+}
+
+.navigation ul a {
+	display: block;
+	width: 100%; 
+	height: auto;
+	text-decoration: none;
+	color: #fff;
+}
+
+.navigation ul a:hover {
+	width: 100%;
+	height: auto;
+	font-weight: bold;
+	
+}
+
+
+.navigation li.navi01 {					 /* 翻訳サービス  */
+/*	display: inline-block;  */
+	padding: 5px 15px 5px 15px;
+	border-bottom: solid 3px #420001;
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 1em;
+	color: #ffffff;
+	background-color: #FB2A2A;
+	border-top-left-radius: 0.7em;
+	border-top-right-radius: 0.7em;
+	margin-left: -4px;					/* マイナス調整  */
+}
+
+.navigation li.navi02 {					 /* お見積りから納品までの流れ  */
+	padding: 5px 15px 5px 10px;
+	border-bottom: solid 3px #420001;
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 1em;
+	color: #FFFFFF;
+	background-color: #FB2A2A;
+	border-top-left-radius: 0.7em;
+	border-top-right-radius: 0.7em;
+	margin-left: 0px;
+}
+
+.navigation li.navi03 {					 /* お見積り・お問い合わせフォーム  */
+	padding: 5px 15px 5px 10px;
+	border-bottom: solid 3px #420001;
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 1em;
+	color: #FFFFFF;
+	background-color: #FB2A2A;
+	border-top-left-radius: 0.7em;
+	border-top-right-radius: 0.7em;
+	margin-left: 0px;
+}
+
+.navigation li.navi04 {					 /* ブログ  */
+	padding: 5px 20px 5px 20px;
+	border-bottom: solid 3px #420001;
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 1em;
+	color: #FFFFFF;
+	background-color: #FB2A2A;
+	border-top-left-radius: 0.7em;
+	border-top-right-radius: 0.7em;
+	margin-left: 2px;
+}
+
+
+	
+
+
+
+/* --------------------  ----------------------------- */
+
+
+
+/* --------------------  ----------------------------- */
+
+

@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>アコーディオン実験</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<style type="text/css">
+#menu_sp,
+#head_res {
+	display: block;
+}
+
+#header_res ul li a:focus			{ color:#fff; text-decoration:none; }
+#header_res ul li a:link			{ color:#fff; text-decoration:none; }
+#header_res ul li a:link:hover		{ color:#aaa; text-decoration:none; }
+#header_res ul li a:link:active		{ color:#aaa; text-decoration:none; }
+#header_res ul li a:visited			{ color:#fff; text-decoration:none; }
+#header_res ul li a:visited:hover	{ color:#aaa; text-decoration:none; }
+#header_res ul li a:visited:active	{ color:#aaa; text-decoration:none; }
+
+/*  スマホ用メニュー
+    はみ出たら部分は、表示しない
+*/
+#menu_sp {
+	width: 200px;
+	float: left;
+	overflow: hidden;
+}
+
+
+/*  menu表示の設定
+*/
+#menu_sp .accordion_head {
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	border: solid 1px #e7e7e7;
+	text-align: center;
+	cursor: pointer;
+	background: #fff;
+	font-weight: bold;
+}
+
+/*  スマホ用メニューのリスト全体の設定
+*/
+#menu_sp ul {
+	width: 100%;
+	overflow: hidden;
+	border: solid 1px #e7e7e7;
+	border-top: 0;
+	font-size: 12px;
+}
+
+
+/*  スマホ用メニューのリスト
+*/
+#menu_sp ul li.accordion_hide {
+	width: 100%;
+	padding: 8px 0;
+	text-align: center;
+	border-top: solid 1px #e7e7e7;
+	background:#000;
+}
+
+/*  上のリンク
+　　ブロックレベル表示
+*/
+#menu_sp ul li.accordion_hide a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+}
+
+/*  上のリンク　カーソル置いたら
+*/
+#menu_sp ul li.accordion_hide a:hover {
+	background:#f5f5f5;
+}
+
+/*  スマホ用メニューの隠しているメニュー3つ
+*/
+#menu_sp ul.menu_sp_main {
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+/*　スマホ用メニューの隠しているメニュー4つ
+*/
+#menu_sp ul.menu_sp_sub {
+	margin: 5px 0;
+	font-size: 85%;
+}
+
+/*　スマホ用メニューの隠しているメニュー4つのリスト項目
+*/
+#menu_sp ul.menu_sp_sub li {
+	background: #000;
+	height: 12px;
+	line-height: 12px;
+}
+
+/*  スマホ用メニューの言語枠全体
+*/
+#head_res ul.sp_lan {
+	width: 64px;
+	height: 27px;
+	margin: 0 0 0;
+	overflow: hidden;
+	float: right;
+}
+
+/*  スマホ用メニューの言語枠全体
+*/
+#head_res ul.sp_lan li {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	margin: 0 0 0 5px;
+	text-align: center;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	border: solid 1px #e7e7e7;
+	background: #fff;
+}
+
+/*   上のリンク
+    リンクが文字だけではなくブロックレベルにする
+	幅・高さも指定
+*/
+#head_res ul.sp_lan li a {
+	display: block;
+	background: #fff;
+	width: 25px;
+	height: 25px;
+}
+
+#header_res ul.sp_lan li a:hover {
+	background: #ccc;
+}
+
+</style>
+
+<script type="text/javascript">
+
+$(function(){
+	$(".accordion_head").click(function(){
+		if($("+ul",this).css("display")=="none"){ 
+			$("+ul",this).slideDown("slow"); 
+		} else {
+			$("+ul",this).slideUp("slow"); 
+		}
+	});
+});
+
+
+</script>
+
+
+</head>
+
+<body bgcolor="#fff">
+
+ <!-- RESPONSIVE MENU -->
+  <div id="head_res">
+    <div id="menu_sp">
+      <div class="accordion_head">menu</div>
+      <ul class="menu_sp_main" style="display: none;">
+        <!-- display: none はJavaScriptで使うため -->
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/concept/">コンセプト</a></li>
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/drinkmenu/drinkmenu_sp.pdf" target="_blank">ドリンク・スイーツメニュー</a></li>
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/foodmenu/food_sp.pdf" target="_blank">フードメニュー</a></li>
+ <!--     </ul>
+ <!--     <ul class="menu_sp_sub" style="display: none;">    -->
+ 
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/shop/">店舗案内</a></li>
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/company/">会社概要</a></li>
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/contact/">お問い合わせ</a></li>
+        <li class="accordion_hide"><a href="http://localhost/nanasgreentea/privacypolicy/">プライバシーポリシー</a></li>
+      </ul>
+    </div>
+    <ul class="sp_lan">
+      <li class="sp_lan_j">J</li>
+      <li class="sp_lan_e"><a href="http://localhost/nanasgreentea/en/">E</a></li>
+    </ul>
+  </div>
+  <!-- /RESPONSIVE MENU --> 
+
+
+</body>
+</html>

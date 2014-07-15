@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>日付</title>
+
+<style type="text/css">
+body {
+	text-align: center;
+
+}
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<h1>普通の日付</h1>
+<script type="text/javascript">
+//今の日付
+var now;
+now = new Date();
+document.write("<h1>", now , "</h1>");
+
+
+</script>
+
+<h1>yyyy年mm月dd日で表示 <br>※月は0始まりだから1を足している</h1>
+<script type="text/javascript">
+//今の日付
+var now , yDate;
+now = new Date();
+yDate = now.getFullYear() + "年" + (now.getMonth()+1) + "月" + now.getDate() + "日";
+document.write("<h1>", yDate , "</h1>");
+
+
+</script>
+
+<h1>平成に変えて表示 </h1>
+<script type="text/javascript">
+//今の日付
+var now , heisei , theDate ;
+now = new Date();
+
+//平成に変えて表示 ※月は0始まりだから1を足している
+heisei = now.getFullYear() - 1988;
+theDate = "平成" + heisei + "年" + (now.getMonth()+1) + "月" + now.getDate() + "日" ;
+
+document.write("<h1>", theDate , "</h1>");
+
+</script>
+
+<h1>曜日を追加</h1>
+<script type="text/javascript">
+// 今の日付
+var now , heisei , theDate , days , theDay;
+now = new Date();
+
+//曜日を表示
+days = new Array("日","月","火","水","木","金","土");
+theDay = days[now.getDay()];
+
+//平成に変えて表示 ※月は0始まりだから1を足している
+heisei = now.getFullYear() - 1988;
+theDate = "平成" + heisei + "年" + (now.getMonth()+1) + "月" + now.getDate() + "日" + "(" + theDay + ")";
+
+//曜日を表示
+days = new Array("日","月","火","水","木","金","土");
+
+document.write("<h1>", theDate , "</h1>");
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>イメージをランダムに表示する</title>
+<style type="text/css">
+<!--
+body {;
+	text-align: center;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<h1>ランダムに画像表示</h1>
+<p>ブラウザを更新（F5）すると画像が変わる</p>
+
+<script type="text/javascript">
+numOfImg = 4;      <!-- 画像が4つだから４ -->
+var num;
+num = Math.floor(Math.random() * 4) 
+
+
+document.write('<img src="images/img',num,'.jpg">');
+
+
+</script>
+
+<!-- 
+Math.floor 小数点以下切捨て
+Math.random()  0から1の間でランダム数を出す
+Math.random()*4  最大4以内のランダム数を出す
+Math.floor(Math.random() * 4) 		0,1,2,3の4通り数字を算出
+
+<img src="ファイル名">を出力
+ファイル名を0から4にする。
+
+前提条件
+画像を同じフォルダに入れる
+画像のファイル名を0～3だけ変えて、後は同じ名前にする
+ -->
+<p></p>
+
+</body>
+</html>

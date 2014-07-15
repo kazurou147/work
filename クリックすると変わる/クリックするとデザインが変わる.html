@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>クリックすると変わる</title>
+
+<style type="text/css">
+#btn {							<!-- ボタンのデザイン -->
+	display: inline;
+	width: 350px;
+	height: 25px;            
+	border: solid 1px #000000;
+	background-color: #e7e7e7;
+	text-align: center;
+	padding: 10px 0 0 0;  <!-- vertical-alignはブロックレベルに使用できないのでpaddingで指定した -->
+	font-size: 15px; 
+	
+}
+
+</style>
+
+<script type="text/javascript">
+
+function myFunction(){
+	var x = document.getElementById("btn");
+	x.style.color = "red";
+	x.style.width = "600px";
+	x.style.height = "200px";
+	x.style.fontSize = "40px";
+	x.style.paddingTop = "160px";
+	
+	}
+
+</script>
+</head>
+
+<p>文字をクリックすると違うcssで設定したデザインがかわる</p>
+<h1>ただし元には戻せない</h1>
+
+<body bgcolor="#FFFFFF">
+
+<div id="border">
+<p id="btn" onclick="myFunction()">クリックするとデザインが変わる</p>
+</div>
+
+
+</body>
+</html>

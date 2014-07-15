@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>リスト１</title>
+<style type="text/css">
+
+
+
+body {
+	background-color: #fff;
+	}
+
+p {
+	margin-bottom: 0;
+	}	
+
+
+ul {
+	background-color: #e7e7e7;
+	list-style-type: none;
+	margin-top: 0px;
+}
+	
+ul li {
+		background-color: #ff0000;
+		
+}
+
+/* ブロックレベル */
+ul.block li a {
+	display: block;
+	}
+
+/* インライン */
+ul.inline li a {
+	display: inline;
+	}
+
+/* liをインライン　aをブロックレベル */
+ul.a-block li {
+	display: inline;
+	}
+
+ul.a-block li a {
+	display: block;
+	}
+
+/* liをインラインブロック */
+ul.inline-block li {
+	display:inline-block;
+	}
+
+/* liをインラインブロックにしてaをブロック */
+ul.li-inline-and-a-block li {
+	display:inline-block;
+	}
+
+ul.li-inline-and-a-block li a {
+	display:block;
+	}
+
+/* liをdisplay:inline-block liにpadding左右 20px */
+ul.li-pad li {
+	display:inline-block;
+	padding: 0 20px;
+	}
+	
+/* liをdisplay:inline-block aにpadding左右 20px */
+ul.a-pad li {
+	display:inline-block;
+	}
+ul.a-pad li a {
+	padding: 0 20px;
+	}
+
+/* 上にmargin:0 */
+ul.margin-zero li {
+	display:inline-block;
+	margin:0px;
+	}
+ul.margin-zero li a {
+	padding: 0 20px;
+	}
+
+/* 改行が原因らしい */
+ul.kaigyo li {
+	display:inline-block;
+	margin:0px;
+	}
+ul.kaigyo li a {
+	padding: 0 20px;
+	}
+
+	
+</style>
+
+</head>
+<body>
+<p>
+リンクについて！<br>
+
+</p>
+<p>灰色はulの枠  赤色はliの枠</p>
+<h1>リンクのdisplay設定</h1>
+<p>リンクをつけた状態  文字だけリンクが付く</p>
+<ul class="none">     <!-- 文字だけ -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>リンクをdisplay:blockにすると　　枠全体がリンク可能になる</p>
+<ul class="block">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>リンクをdisplay:inlineにすると　　文字だけ</p>
+<ul class="inline">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+<p>liをdisplay:inline　リンク（a）をdisplay:block
+<ul class="a-block">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>liをdisplay:inline-block 　　</p>
+<ul class="inline-block">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>liをdisplay:inline-block ＆ リンク（a）をdisplay:block ※上と変化なし</p>
+<ul class="li-inline-and-a-block">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>liをdisplay:inline-block liにpadding左右 20px　　</p>
+<ul class="li-pad">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>liをdisplay:inline-block リンク（a）にpadding左右 20px　※クリック領域が変わる</p>
+<ul class="a-pad">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>上にli margin:0を追加してもリスト同士の隙間はなくならない　　</p>
+<ul class="margin-zero">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>リストの改行が原因らしい　改行をなくすと隙間がなくなった　</p>
+<ul class="kaigyo">     <!-- 枠全体 -->
+<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li><li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li><li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li><li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+
+
+
+
+</body>
+</html>

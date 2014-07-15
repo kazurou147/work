@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>リスト１</title>
+<style type="text/css">
+
+
+
+body {
+	background-color: #fff;
+	}
+
+p {
+	margin-bottom: 0;
+	clear:both;
+	}	
+
+
+ul {
+	background-color: #e7e7e7;
+	list-style-type: none;
+	margin-top: 0px;
+	padding: 0;
+	text-decoration: none;
+}
+
+/* liをdisplay:inline-block aにpadding左右 20px */	
+ul li {
+		display:inline-block;
+		background-color: #ff0000;	
+}
+
+ul li a {
+	text-decoration: none;
+	padding: 0 20px;
+}
+
+/* カーソルを置くと色が変わる */
+ul li:hover {
+	background-color: #000;
+	}
+	
+ul li a:hover {
+	color: #fff;
+	}	
+
+/* 右側によせる＆左側に文字を入れる */
+ul.right {
+	float: right;
+	}
+
+h2.right {
+	float: left;
+	border: solid 1px #000;
+	margin: 0;
+	}
+
+/*   選択したメニューの色が変わる    */
+ul.click-after a.active {
+	background-color: #000;
+	}
+
+	
+</style>
+</head>
+<body>
+<p>
+リンクについて！<br>
+
+</p>
+<p>灰色はulの枠  赤色はliの枠<br>
+
+</p>
+<h1>ナビメニュー</h1>
+
+<p>liをdisplay:inline-block<br>
+リンク（a）をdisplay:blockとしても変化なし<br>
+paddingはliではなく、リンク（a）にコーディングすること<br>
+li margin:0を追加してもリスト同士の隙間はなくならない  リストの改行が原因らしい　改行をなくすと隙間がなくなった
+ </p>
+<p>liをdisplay:inline-block リンク（a）にpadding左右 20px　※クリック領域が変わる</p>
+<ul class="a-pad">     <!-- 枠全体 -->
+	<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+
+<p>リストの改行が原因らしい　改行をなくすと隙間がなくなった　</p>
+<ul class="kaigyo">     <!-- 枠全体 -->
+<li><a href="http://futatsumaru.net/" target="_blank">文字1</a></li><li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li><li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li><li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>カーソルを置くと色が変わる　</p>
+<ul class="cursor">     <!-- 枠全体 -->
+	<li><a href="#body" >文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>右側によせる＆左側に文字を入れる（float使用)</p>
+<h2 class="right">左側の文字</h2>
+<ul class="right">     <!-- 枠全体 -->
+	<li><a href="#body" >文字1</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字2</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字3</a></li>
+	<li><a href="http://futatsumaru.net/" target="_blank">文字4</a></li>
+</ul>
+
+<p>&nbsp;</p>
+<p>選択したメニューの色が変わる※まだ作業途中</p>
+<ul class="click-after">     <!-- 枠全体 -->
+	<li><a href="#body" >文字1</a></li>
+	<li><a href="#body" >文字2</a></li>
+	<li><a href="#body" >文字3</a></li>
+	<li><a href="#body" >文字4</a></li>
+</ul>
+
+
+
+
+
+</body>
+</html>

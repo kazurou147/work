@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>アコーディオン実験</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<style type="text/css">
+<!--
+dt.shoplist_cursor {
+	               text-decoration: underline;
+		           cursor: pointer;
+}
+
+dd.shoplist_display {
+	                font-size: 85%;
+				    margin: 5px 0 10px 10px;
+				   display: none;
+				   }
+-->
+</style>
+
+<script type="text/javascript">
+
+$(function(){
+	$(".accordionOpen dt").click(function(){
+		if($("+dd",this).css("display")=="none"){ 
+			$("+dd",this).slideDown("slow"); 
+		} else {
+			$("+dd",this).slideUp("slow"); 
+		}
+	});
+});
+
+// +ddは必須　ddがないとスライドする指定している
+</script>
+
+
+</head>
+
+<body bgcolor="#fff">
+
+  <!-- 北海道　 -->
+     <h2>[北海道]</h2>
+     <dl class="accordionOpen">       <!--  definition list  -->
+     
+     <dt class="shoplist_cursor">札幌パセオ店</dt>   <!--  definition term  -->
+     
+     <dd class="shoplist_display">北海道札幌市北区北6条西2丁目<br />   <!-- definition description   -->
+     パセオセンター B1<br />
+     TEL：011-213-5459<br />
+     10：00～22：00</dd>
+     
+     <dt class="shoplist_cursor">札幌パルコ店</dt>      
+     <dd class="shoplist_display">北海道札幌市中央区南1条西3丁目3番地<br />  
+     札幌パルコ 5F<br />
+     TEL：011-350-3763<br />
+     10：00～20：00<br />
+     10：00～20：30（土曜日のみ）</dd>
+     
+     </dl>
+
+
+</body>
+</html>

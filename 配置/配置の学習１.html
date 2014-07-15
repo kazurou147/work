@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>配置の学習１</title>
+<style type="text/css">
+
+<!-- 横に並べる -->
+
+
+body {
+	background-color: #fff;
+	}
+
+<!--	
+#section {
+	width: 800px;
+	display: inline-block;
+	border: solid 1px #ccc;
+}  -->
+	
+#sample1 {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	border: solid 1px #ddd;
+	font-size: 30px;
+	
+}
+	
+#sample2 {
+	width: 280px;
+	font-size: 20px;
+	border: solid 1px #aaa;
+	
+}
+
+</style>
+
+
+</head>
+<body>
+<p>
+配置が上手くできないから、ここで勉強！！<br>
+</p>
+<p>
+inline-blockを使った。<br>
+【ポイント】
+並べたいものは同じid,classにしろ！<br>
+一律で幅、高さが指定できる<br>
+【デメリット】<br>
+一括で幅、高さを指定しているので、個々に変えられない。<br>
+改行（ｂｒ）を入れると並べたものがずれる。<br>
+【使い道を考える】<br>
+同じ大きさのモノを横並びにするには良いかも<br>
+</p>
+
+
+<div id="section">
+
+<div id="sample1">
+段落１でーー<br>
+ーー<br>
+ーす！
+</div>
+
+<div id="sample1">
+段落2<br>でー<br>	す！
+</div>
+
+
+<p id="sample2">
+段落3だよよよよよよよよよよ
+</p>
+
+</div>
+
+
+
+
+</body>
+</html>
