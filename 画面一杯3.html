@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>画面一杯3</title>
+
+<style type="text/css">
+
+img#bg  {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	opacity: 0.5;
+	}
+
+.bgwidth {
+	width: 100%;
+}
+
+.bgheight {
+	height: 100%;
+}
+
+#wrapper {
+	position: relative;
+	text-align: center;
+	}	
+
+</style>
+<script>
+$(window).load(function() {    
+
+	var theWindow        = $(window),
+	    $bg              = $("#bg"),
+	    aspectRatio      = $bg.width() / $bg.height();
+	    			    		
+	function resizeBg() {
+		
+		if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+		    $bg
+		    	.removeClass()
+		    	.addClass('bgheight');
+		} else {
+		    $bg
+		    	.removeClass()
+		    	.addClass('bgwidth');
+		}
+					
+	}
+	                   			
+	theWindow.resize(resizeBg).trigger("resize");
+
+});
+
+
+
+</script>
+</head>
+<body>
+<img id="bg" alt="" src="images/image1.jpg">
+<div id="wrapper">
+<header><h1>画面一杯３（jQuery)</h1>
+
+
+</header>
+
+<h2>windowオブジェクトに指定。そして画面の大きさによってwidth heightが変わる<br>
+画面一杯の設定で、この方法が一番良い。opacityも指定可能だと思うし、いろいろと設定が追加できるだろう。<br>
+※z-indexの指定不要</h2>
+<p>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br></p>
+
+<footer><a href="#body">html5最小テンプレート</a></footer>
+</div>
+</body>
+</html>
