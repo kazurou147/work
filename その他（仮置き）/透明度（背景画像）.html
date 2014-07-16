@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>透明　背景画像</title>
+<style type="text/css">
+
+#bg img {
+	min-width: 1024px;
+	min-height: 100%;
+
+	width: 100%;
+	height: auto;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	opacity: 0.5;
+	z-index: 0;
+	}
+
+#wrapper {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	}
+
+</style>
+</head>
+<body>
+<div id="bg">
+<img class="bg" alt="" src="../images/image1.jpg">
+</div>
+<div id="wrapper">
+<h2>backgroundで指定するのではなく、imgをposition=fixedで指定する。<br>
+この方法だと、画像だけopacityで薄くできる。<br>
+※z-indexはpositionのstatic以外の指定があって適用される</h2>
+</div>
+
+</body>
+</html>

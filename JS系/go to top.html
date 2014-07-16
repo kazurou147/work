@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>go to top</title>
+<style type="text/css">
+h1 {
+	height: 1500px;
+	}
+
+/*  下から現れる  */
+#pagetop1 {						
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+#pagetop1 a {
+	width: 90px;
+	height: 60px;
+	display: block;
+	background-color: #ff0000;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	padding: 30px 0 0 0;
+	border-radius: 50%;
+	text-decoration: none;
+	
+}
+
+/*  無いところから現れる */
+#pagetop2 {						
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	display: none;
+}
+
+#pagetop2 a {
+	width: 90px;
+	height: 60px;
+	display: block;
+	background-color: #ff0000;
+	color: #000;
+	text-align: center;
+	font-size: 20px;
+	padding: 30px 0 0 0;
+	border-radius: 50%;
+	text-decoration: none;
+	
+}	
+
+</style>
+
+</head>
+
+<body>
+<h1>1</h1>
+<div id="pagetop1">
+<a href="#body">TOP</a>
+</div>
+
+<script>
+$(function(){
+		var showBtn = false;
+		var topBtn = $('#pagetop1');
+		topBtn.css('bottom','-100px');
+		
+		
+		//スクロールが１００に達したらボタンを表示
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 200) {
+				if(showBtn == false){
+					showBtn = true;
+					topBtn.stop().animate({'bottom' : '20px'},700);
+				}	
+				
+			} else {
+				if(showBtn){
+					showBtn = false;
+					topBtn.stop().animate({'bottom' : '-100px'},700);
+				}
+			}
+});
+
+		//スクロールしてトップ
+		topBtn.click(function(){
+			$('body,html').animate({
+				scrollTop: 0
+			}, 100);
+			return false;
+		});
+
+});
+</script>
+
+<div id="pagetop2">
+<a href="#body">トップ</a>
+</div>
+
+<script>
+		var showBtn = false;
+		var topBtn = $('#pagetop2');
+		//スクロールが１００に達したらボタンを表示
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 200) {
+				if(showBtn == false){
+					showBtn = true;
+					topBtn.fadeIn();
+				}	
+				
+			} else {
+				if(showBtn){
+					showBtn = false;
+					topBtn.fadeOut();
+				}
+			}
+});
+
+		//スクロールしてトップ
+		topBtn.click(function(){
+			$('body,html').animate({
+				scrollTop: 0
+			}, 100);
+			return false;
+		});
+
+</script>
+
+</body>
+</html>
