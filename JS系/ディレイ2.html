@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>アニメーション</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<style type="text/css">
+body {
+	width: 1024px;
+	margin: 0 auto;
+	}
+
+
+div#sample0 img {
+	display: none;
+	}
+
+
+div#sample1 {
+	width: 500px;
+	position: relative;
+	left: -500px
+	}
+	
+div#sample2 {
+	width: 500px;
+	display: none;
+	}
+
+div#sample3 {
+	position: relative;
+	left: 2000px;
+	display: none;
+	}
+	
+</style>
+
+
+	
+</head> 
+
+<body>
+<div id="sample0">
+<img src="../images/img0.jpg" alt=""></div>
+<script type="text/javascript">
+$("#sample0 img").delay(1000).show("slow")
+	 
+</script>
+
+
+ 
+<p>動く　微妙に動く</p>
+<div id="sample1">
+<h1>弾き語り　ふたつまるのサイト</h1></div>
+<script type="text/javascript">
+$("#sample1").delay(1500)
+	.animate(
+	{"left": "100px"},
+	{duration: "slow" , easing: "linear",
+	complete: function(){
+		$(this).css("left","40px");
+		}}	
+	); 
+</script>
+
+<p>現れる</p>
+<div id="sample2">
+<h1>弾き語り　ふたつまるのサイト</h1></div>
+<script type="text/javascript">
+$("#sample2").delay(1000)
+	.animate(
+	{opacity: "show" },
+	{duration: "slow" }
+	); 
+</script>
+
+<p>現れて動く</p>
+<div id="sample3">
+<h1>弾き語り　ふたつまるのサイト</h1></div>
+<script type="text/javascript">
+$("#sample3").delay(2000)
+	.animate(
+	{opacity: "show" , left : "0px"},
+	{duration: 1000 , easing: "linear"}	
+	); 
+</script>
+
+
+<ul>注意点
+<li>margin-leftを使うと左右に動かそうとしたのに、上下にも動いた。多分、上下のmarginが邪魔したのではないかと思う。</li>
+<li>{}は必須。これがないと反応しなかった。</li>
+<li>left指定はpositon指定が必須(static以外の値）</li>
+
+</ul>
+
+</body>
+</html>
