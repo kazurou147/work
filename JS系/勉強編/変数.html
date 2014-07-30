@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>簡単な計算</title>
+<style type="text/css">
+h3 {
+	margin: 30px 0 0 0;
+	}
+
+p {
+	margin: 0;
+	}
+</style>
+</head>
+<body>
+<h3>変数を指定</h3>
+<p>
+var heisei;<br>
+var fullYear;
+</p>
+
+<h3>下のようにカンマで区切ってもOK</h3>
+<p>
+var heisei,fullYear;
+</p>
+
+
+<h3>変数に値を代入</h3>
+<p>
+heisei = 26;<br>
+fullYear = heisei + 1988;
+</p>
+
+
+<h3>数値の場合は「＋」は、足し算になるが、文字列だと連結になる</h3>
+<p>数値の場合</p>
+<script>
+var heisei;
+var fullYear;
+
+heisei = 26;
+fullYear = heisei + 1988;
+
+document.write("26 + 1988 = ",fullYear)
+</script>
+<p>文字の場合は、連結される</p>
+<script>
+var firstName,lastName,fullName;
+
+firstName = "かずひろ";
+lastName = "まえだ";
+fullName = lastName + firstName;
+
+document.write("まえだ + かずひろ = ",fullName)
+</script>
+
+<h3>注意！　数値と文字列が混在していたら、連結になる</h3>
+
+<h3>文字列を数値に変換する関数　parseInt(文字列,10) ※10進数</h3>
+<script>
+heisei = "26";
+fullYear = heisei + 1988;
+
+document.write('"26" + 1988 = ',fullYear,'<br>')
+</script>
+<script>
+heisei = "26";
+fullYear = parseInt(heisei,10) + 1988;
+
+document.write("parseInt(heisei) + 1988 = ",fullYear)
+
+
+</script>
+
+
+
+
+</body>
+</html>

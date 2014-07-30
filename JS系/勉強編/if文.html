@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if文</title>
+<style type="text/css">
+p {
+	margin: 30px 0 0 0;
+	}
+	
+p.if {
+	display: inline-table;
+	margin-right: 50px
+	}
+</style>
+</head>
+<body>
+<p class="if">if (条件) {<br>
+	ステートメント1<br>
+	ステートメント2<br>
+	・・・・・・<br>
+</p>
+
+<p class="if">if (条件) {<br>
+	ステートメント1<br>
+	ステートメント2<br>
+	・・・・・・<br>
+	} else {<br>
+	ステートメントa<br>
+	ステートメントb<br>
+	・・・・・・<br>
+</p>
+
+<p class="if">if (条件1) {<br>
+	ステートメント1<br>
+	ステートメント2<br>
+	・・・・・・<br>
+	} else　if (条件2){<br>
+	ステートメントa<br>
+	ステートメントb<br>
+	・・・・・・<br>
+		} else {<br>
+	ステートメントA<br>
+	ステートメントB<br>
+	・・・・・・<br>
+</p>
+<p>
+条件式に使われる演算子<br>
+==　　
+!=　　
+<　　
+>　　
+<=　　
+>=　　
+</p>
+<h2>例:　今何時？</h2>
+<p>10時までなら「おはよう」<br>
+18時までなら「こんにちは」<br>
+18時以降は「こんばんは」</p>
+<script>
+
+
+
+var now = new Date();
+var time = now.getHours();
+
+document.write("<p>今の時間は、",time,"時です。</p>")
+
+if 
+	( time <= 10 ) {
+	document.write("<p>おはようございます</p>")
+	} else if
+	( time  <= 18 ) {
+	document.write("<p>こんにちは</p>")
+	} else {
+	document.write("<p>こんばんは</p>")
+	}
+
+
+
+
+</script>
+
+</body>
+</html>

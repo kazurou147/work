@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>画面サイズ変更による画像切り替え</title>
+
+<style type="text/css">
+
+img#bg  {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	opacity: 0.5;
+	}
+
+.bgwidth {
+	width: 100%;
+}
+
+.bgheight {
+	height: 100%;
+}
+
+#wrapper {
+	position: relative; 
+	}	
+
+</style>
+<script>
+$(window).load(function() {    
+
+	var theWindow        = $(window),
+	    $bg              = $("#bg"),
+	    aspectRatio      = $bg.width() / $bg.height();
+	    			    		
+	function resizeBg() {
+		
+		if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+		    $bg
+		    	.removeClass()
+		    	.addClass('bgheight');
+		} else {
+		    $bg
+		    	.removeClass()
+		    	.addClass('bgwidth');
+		}
+					
+	}
+	                   			
+	theWindow.resize(resizeBg).trigger("resize");
+
+});
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<script>
+var theWindow        = $(window),
+	$bg              = $("#bg"),
+	top3,top3t;
+	
+if ( theWindow.width() < 768 ) {
+	document.write('<img id="bg" alt="" src="images/top3t.png">')
+	} else {
+	document.write('<img id="bg" alt="" src="images/image1.jpg">')
+	}
+	
+document.write(theWindow.width())
+</script>
+<div id="wrapper">
+<header><h1>画面一杯３（jQuery)</h1>
+
+
+</header>
+
+<h2>jqueryを使った「画面一杯3」を利用して、IFで指定<br>
+【問題点】<br>
+画面サイズを変更しても自動で反映されない。更新しなければ反映されない。</h2>
+
+<footer><a href="#body">html5最小テンプレート</a></footer>
+</div>
+</body>
+</html>
