@@ -63,8 +63,9 @@ p.if {
 
 var now = new Date();
 var time = now.getHours();
+var minutes = now.getMinutes();
 
-document.write("<p>今の時間は、",time,"時です。</p>")
+document.write("<p>今の時間は、",time,"時",minutes,"分です。</p>")
 
 if 
 	( time <= 10 ) {
